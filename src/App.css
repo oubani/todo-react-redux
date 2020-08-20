@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.App-header {
+  background-color: #282c34;
+  color: white;
+  padding: 15px;
+}
+.App-link {
+  color: #61dafb;
+}
+.form {
+  width: 60%;
+  margin: 0 auto;
+}
+.form input {
+  width: 80%;
+  height: 40px;
+  border: #a5a8ad solid 1px;
+  margin-top: 15px;
+}
+.form .btn {
+  width: 20%;
+  height: 40px;
+  background: rgba(78, 103, 211, 0.397);
+  border-color: rgba(78, 103, 211, 0.397);
+  cursor: pointer;
+}
+.form .btn:hover {
+  box-shadow: 1px 4px 3px #a5a8ad;
+}
+.todoCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  margin: 15px auto;
+  width: 60%;
+  background: #b4b6b4;
+  border-radius: 5px;
+}
+.todoCard p {
+  color: black;
+}
+.red {
+  color: #d82c2c;
+}
+.icon {
+  cursor: pointer;
+}
