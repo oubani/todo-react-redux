@@ -24,6 +24,12 @@ body {
   height: 40px;
   border: #a5a8ad solid 1px;
   margin-top: 15px;
+  padding: 5px 15px;
+  border-radius: 10px 0px 0px 10px;
+}
+h2 {
+  margin-top: 15px;
+  text-align: center;
 }
 .form .btn {
   width: 20%;
@@ -31,9 +37,17 @@ body {
   background: rgba(78, 103, 211, 0.397);
   border-color: rgba(78, 103, 211, 0.397);
   cursor: pointer;
+  border-radius: 0px 10px 10px 0px;
+  color: #ffffff;
 }
 .form .btn:hover {
   box-shadow: 1px 4px 3px #a5a8ad;
+}
+.form .btn:active {
+  border-color: rgba(78, 103, 211, 0.397);
+}
+.form .btn:visited {
+  border-color: rgba(78, 103, 211, 0.397);
 }
 .todoCard {
   display: flex;
@@ -42,7 +56,7 @@ body {
   padding: 10px 15px;
   margin: 15px auto;
   width: 60%;
-  background: #b4b6b4;
+  background: #d5e0d5;
   border-radius: 5px;
 }
 .todoCard p {
@@ -53,4 +67,9 @@ body {
 }
 .icon {
   cursor: pointer;
+}
+.danger {
+  background: #e73c3c;
+  color: #d5e0d5;
+  border: solid 2px rgb(255, 0, 0);
 }

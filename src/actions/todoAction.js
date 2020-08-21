@@ -1,4 +1,10 @@
-import { ADD_TODO, GET_TODOS, DELETE_TODO, TODOS_ERROR } from './types';
+import {
+  ADD_TODO,
+  GET_TODOS,
+  DELETE_TODO,
+  TODOS_ERROR,
+  CLEAR_ERROR,
+} from './types';
 
 export const getTodos = () => (dispatch) => {
   try {
@@ -13,6 +19,7 @@ export const getTodos = () => (dispatch) => {
   }
 };
 
+// deleteTodo
 export const addTodo = (todo) => (dispatch) => {
   try {
     dispatch({
@@ -22,10 +29,12 @@ export const addTodo = (todo) => (dispatch) => {
   } catch (err) {
     dispatch({
       type: TODOS_ERROR,
-      payload: err.response.statusText,
+      payload: 'todos Error',
     });
   }
 };
+
+// Delete todo
 export const deleteTodo = (id) => (dispatch) => {
   try {
     dispatch({
@@ -38,4 +47,17 @@ export const deleteTodo = (id) => (dispatch) => {
       payload: err.response.statusText,
     });
   }
+};
+
+// SetError message
+export const setError = (message) => (dispatch) => {
+  dispatch({
+    type: 'TODOS_ERROR',
+    payload: message,
+  });
+};
+export const clearError = () => (dispatch) => {
+  dispatch({
+    type: 'CLEAR_ERROR',
+  });
 };

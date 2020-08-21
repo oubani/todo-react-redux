@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getTodos } from '../../actions/todoAction';
 import TodoItem from './TodoItem';
 
 const Todos = ({ todo: { todos }, getTodos }) => {
+  useEffect(() => {
+    getTodos();
+  }, []);
   return (
     <div>
-      {todos.map((todo) => (
-        <TodoItem todo={todo} key={todo.id} />
-      ))}
+      {todos !== null ? (
+        todos.map((todo) => <TodoItem todo={todo} key={todo.id} />)
+      ) : (
+        <h2>No todos , please add todos </h2>
+      )}
     </div>
   );
 };

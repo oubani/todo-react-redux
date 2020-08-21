@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { addTodo } from '../../actions/todoAction';
-const AddTodo = ({ addTodo }) => {
+import { addTodo, setError, clearError } from '../../actions/todoAction';
+const AddTodo = ({ addTodo, setError, clearError }) => {
   const [text, setText] = useState('');
   const onChange = (e) => {
     setText(e.target.value);
@@ -19,7 +19,10 @@ const AddTodo = ({ addTodo }) => {
       console.log(text);
       setText('');
     } else {
-      console.log('Errors');
+      setError('Please fill the filed');
+      setTimeout(() => {
+        clearError();
+      }, 3000);
     }
   };
   return (
@@ -36,4 +39,4 @@ const AddTodo = ({ addTodo }) => {
   );
 };
 
-export default connect(null, { addTodo })(AddTodo);
+export default connect(null, { addTodo, setError, clearError })(AddTodo);
