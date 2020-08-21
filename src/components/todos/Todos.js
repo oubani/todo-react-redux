@@ -10,7 +10,7 @@ const Todos = ({ todo: { todos }, getTodos }) => {
   }, []);
   return (
     <div>
-      {todos !== null ? (
+      {todos.length !== 0 ? (
         todos.map((todo) => <TodoItem todo={todo} key={todo.id} />)
       ) : (
         <h2>No todos , please add todos </h2>

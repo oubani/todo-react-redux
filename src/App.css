@@ -25,7 +25,6 @@ body {
   border: #a5a8ad solid 1px;
   margin-top: 15px;
   padding: 5px 15px;
-  border-radius: 10px 0px 0px 10px;
 }
 h2 {
   margin-top: 15px;
@@ -56,8 +55,9 @@ h2 {
   padding: 10px 15px;
   margin: 15px auto;
   width: 60%;
-  background: #d5e0d5;
-  border-radius: 5px;
+  border-radius: 0px 5px 5px 0px;
+  border-left: #d82c2c 4px solid;
+  background: #f0f2f7;
 }
 .todoCard p {
   color: black;
@@ -69,7 +69,8 @@ h2 {
   cursor: pointer;
 }
 .danger {
-  background: #e73c3c;
-  color: #d5e0d5;
-  border: solid 2px rgb(255, 0, 0);
+  background: #f39797;
+  color: black;
+  margin: 15px auto 0px;
+  border-radius: 0px 10px 10px 0px;
 }

@@ -22,7 +22,7 @@ const AddTodo = ({ addTodo, setError, clearError }) => {
       setError('Please fill the filed');
       setTimeout(() => {
         clearError();
-      }, 3000);
+      }, 100000);
     }
   };
   return (
